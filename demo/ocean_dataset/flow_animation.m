@@ -1,12 +1,6 @@
 %% Load ocean data set
 load('ocean_geostrophic_velocity.mat');
 
-% Set velocity to zero at boundaries
-vlon(:,[1,end],:) = 0;
-vlon(:,:,[1,end]) = 0;
-vlat(:,[1,end],:) = 0;
-vlat(:,:,[1,end]) = 0;
-
 %% Set parameters
 % Define right hand side of ODE, ocean.flow.derivative
 interpMethod = 'spline';
